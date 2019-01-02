@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  cli:
+    build: .
+    image: oliveirarthur/boilerplate_ionic
+    volumes:
+      - .:/app
+    working_dir: /app

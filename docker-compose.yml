@@ -4,6 +4,7 @@ services:
   cli:
     build: .
     image: oliveirarthur/boilerplate_ionic
+    env_file: .env
     volumes:
       - .:/app
     working_dir: /app

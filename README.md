@@ -4,7 +4,12 @@
 
 - Use as a virutal environment for development
 ```sh
-docker-compose run -u $UID cli sh
+# create the .env file
+cp .env.example .env
+# starts a new container
+docker-compose run --rm -u $UID cli sh
+# login into Firebase and paste the token into `FIREBASE_TOKEN` variable of the .env file
+firebase login:ci --no-localhost
 ```
 
 - Use the pre built version (available at https://hub.docker.com/r/oliveirarthur/boilerplate_ionic)
